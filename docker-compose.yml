@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: jobs-postgres
+    environment:
+      POSTGRES_DB: jobs_db
+      POSTGRES_USER: jobs_user
+      POSTGRES_PASSWORD: jobs_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - jobs_pg_data:/var/lib/postgresql/data
+
+volumes:
+  jobs_pg_data:
