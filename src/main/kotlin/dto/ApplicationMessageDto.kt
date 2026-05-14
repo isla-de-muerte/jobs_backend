@@ -21,4 +21,4 @@ data class ApplicationMessageResponse(
 data class ApplicationUnreadCountResponse(
     val applicationId: String,
     val unreadCount: Int
-)
+) 
